@@ -7,7 +7,7 @@ I y(I n,I*a,I*p){I b=0;for(I k;k<n;k++){I t=0;I l=k;while(!a[k]&&k<n){t++;k++;}i
 // More interesting attempt not using for/while
 // Not sure if it works 100%. If you can crash this I'll be happy to know
 // It needs c++ compiler. You can compile this with $gcc spojny.cpp (But not with $gcc spojny.c)
-I f(I i,I n,I*a,I*k,I*t,I*b,I*p){return(i>n)?*b:f(i+1,n,a,&(*k=(((!a[i+1]&&!*t)?i+1:*k))),&(*t=(a[i]==0)?(*t)+1:0),&(*b=(*t>*b)?*t:*b),&(*p=(*t>*b)?*k:*p));}I g(I n,I*a,I*p){I t=0; I k=0; I b=0;return f(0,n,a,&k,&t,&b,p);}
+I f(I i,I n,I*a,I*k,I*t,I*b,I*p){return(i>n)?*b:f(i+1,n,a,&(*k=(((!a[i+1]&&!*t)?i+1:*k))),&(*t=(a[i]==0)?(*t)+1:0),&(*b=(*t>*b)?*t:*b),&(*p=(*t>*b)?*k:*p));}I g(I n,I*a,I*p){I t=0;I k=0;I b=0;return f(0,n,a,&k,&t,&b,p);}
 
 // Normal version
 int max_sbstr(int n, int a[], int *pos) {
