@@ -7,17 +7,17 @@ const int BASE_HEIGHT    = 3;
 int main()
 {
     int height;
-    printf("Input height:\n");
+    printf("Input height > 3:\n");
     scanf("%d", &height);
 
-    if (height < 0) {
-        printf("Invalid argument: negative height; exiting...\n");
+    if (height < 3) {
+        printf("Invalid argument range: height; exiting...\n");
         return 1;
     }
 
     for (int i = 1; i <= height; i++) {
         for (int j = 1; j <= height - i; j++) printf(" ");
-        for (int j = 1; j <= 2 * i - 1; j++)  printf ("*");
+        for (int j = 1; j <= 2 * i - 1; j++)  printf("*");
         printf("\n");
     }
 
